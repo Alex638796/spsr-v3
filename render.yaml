@@ -1,0 +1,44 @@
+services:
+  - type: web
+    name: spsr-v3
+    plan: free
+    env: docker
+    dockerfilePath: ./Dockerfile
+    repo: https://github.com/v88409/spsr-v3
+    branch: main
+    autoDeploy: false
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: MONGO_DB
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: DB_NAME
+        value: telegram_downloader
+      - key: STRING
+        sync: false
+      - key: FORCE_SUB
+        sync: false
+      - key: LOG_GROUP
+        sync: false
+      - key: MASTER_KEY
+        sync: false
+      - key: IV_KEY
+        sync: false
+      - key: YT_COOKIES
+        sync: false
+      - key: INSTA_COOKIES
+        sync: false
+      - key: FREEMIUM_LIMIT
+        value: "0"
+      - key: PREMIUM_LIMIT
+        value: "500"
+      - key: ADMIN_CONTACT
+        sync: false
+      - key: JOIN_LINK
+        sync: false
